@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 출력 방법
+        //1) alert 팝업 창
+        alert("hello world");
+
+        //2) console.log 콘솔 로그
+        console.log("서버와 자바스크립트의 차이는 인도와 인도네시아의 차이");
+
+        //3) document.wirte 문서에 작성
+        document.write("안녕하세요."); /*"<h1>안녕하세요.</h1>" style 적용가능*/
+    
+        //2. 변수
+        var item = "변수 선언";
+        // 변수 선언 시 카멜케이스 사용
+        var koreaItAcademy = "코리아 IT 학원";
+        console.log(item);
+        console.log(koreaItAcademy);
+
+        // 대소문자 구분함 다른 변수임
+        var koreatIT = "코리아 IT 아카데미";
+        var koreait = "코리아 it 아카데미";
+        
+        // 자료형 num1은 숫자형, num2는 문자형
+        var num1 = 999;
+        var num2 = "999";
+
+        console.log("num1 = " + num1);
+        console.log("type: " + typeof num1);   //type 확인
+        console.log("num2 = " + num2);
+        console.log("type: " + typeof num2);   //type 확인
+
+        // 3. 연산자
+        // 동등연산자 -> '==' 데이터 자체가 일치한지 비교
+        console.log(num1 == num2);
+
+        // 일치연산자 -> '===' 데이터 + type까지 비교
+        console.log(num1 === num2);
+
+        //사칙연산자
+        var a = 10;
+        var b = 20;
+        console.log(a + b);
+
+        var c = "안녕하세요. ";
+        var d = "저는 장성훈입니다.";
+        console.log(c + d);
+
+        var num3 = 10;
+        var num4 = 20;
+        console.log(num3 + ", " + num4)
+        console.log(num3 > num4);
+        console.log(num3 < num4);
+        console.log(num3 >= num4);
+        console.log(num3 <= num4);
+        console.log(num3 == num4);
+        console.log(num3 != num4);
+
+        // 논리 자료형, boolean
+        var item3 = true;
+        var item4 = false;
+
+        var item5 = null;
+        var item6;
+        console.log(item5); // null
+        console.log(item6); // underfined
+        console.log(item5 == item6); //true
+        console.log(item5 === item6); //flase
+        // console.log(item7); // item5 라는 변수 없음
+    </script>
+
+</body>
+</html>
