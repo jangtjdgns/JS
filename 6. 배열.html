@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        // ];
+
+        // console.log(students.length);
+
+        // for(var i = 0; i < students.length; i++){
+        //     document.write(students[i] + "<br>");
+        // }
+
+
+        // var myName = "JANGSEONGHUN";
+
+        // for(var i = 0; i < myName.length; i++){
+        //     document.write(myName[i] + "<br>");     //myName[i] || myName.charAt(i)
+        // }
+
+
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        // ];
+        
+        // 요소추가
+        // students.push('폴');        //push -> 배열의 끝에 요소 추가
+        // students.unshift('폴');     //unshift -> 배열의 앞에 요소 추가
+        // students.splice("위치", 0, ["요소1", "요소2" ... ])
+
+        // 요소제거
+        // students.pop();             //pop -> 배열의 끝에 요소 제거
+        // students.shift();           //shift -> 배열의 앞에 요소 제거
+        // students.splice("시작위치", "제거건수", ["요소1", "요소2" ... ])
+
+        // for(var i = 0; i < students.length; i++){
+        //     document.write(students[i] + "<br>");
+        // }
+
+        
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        //     '폴',
+        // ];
+
+        // for(var i = 0; i < students.length; i++){
+        //     students[i] += "님";
+        // }
+        
+        // console.log(students);
+
+
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        //     '폴',
+        // ];
+
+        // // reverser() -> 배열 요소 반대로
+        // console.log(students.reverse());
+        // console.log(students);
+
+
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        //     '폴',
+        // ];
+
+        // // sort() -> 배열 요소 오름차순
+        // console.log(students.sort());
+
+
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        //     '폴',
+        // ];
+
+        // var name = '성훈'
+        // console.log(students.indexOf(name)); // 해당 요소 번호, 없으면 -1
+        // console.log(students.includes(name)); // 해당 요소가 있으면 true 없으면 false
+    
+    
+        // var students = [
+        //     '소민',
+        //     '세진',
+        //     '호윤',
+        //     '현규',
+        //     '성훈',
+        //     '지호',
+        //     '효은',
+        //     '희지',
+        //     '폴',
+        // ];
+
+        // var ages = [
+        //     100,
+        //     95,
+        //     3,
+        // ]
+
+        // // for(var i = 0; i < ages.length; i++){
+        // //     students.push(ages[i]);
+        // // }
+
+        // // console.log(students);
+
+        // // concat() -> 배열 합치기
+        // console.log(students.concat(ages));
+
+
+        // 1~100의 배열 중 홀수만 남게
+        // var numbers = [];
+
+        // for(var i = 0; i < 100; i++){
+        //     numbers.push(i);
+        // }
+        // console.log(numbers);
+
+        // for(var j = 0; j < numbers.length; j++){
+        //     if(numbers[j] % 2 === 0){
+        //         numbers.splice(j, 1);
+        //     }
+        // }
+
+        // console.log(numbers);
+
+
+        // 배열 요소를 자르고 형변환
+        // var prices = ['1000원', '2000원', '3000원'];
+        // var total = 0;
+
+        // for(var i = 0; i < prices.length; i++){
+        //     prices[i] = prices[i].substr(0, prices[i].length-1);
+        // }
+
+        // for(var j = 0; j < prices.length; j++){
+        //     total += parseInt(prices[j]);
+        // }
+
+        // substr 사용
+        // for(var i = 0; i < prices.length; i++){
+        //     total += parseInt(prices[i].substr(0, prices[i].length - 1));
+        // }
+
+        // replace 사용
+        // for(var i = 0; i < prices.length; i++){
+        //     total += parseInt(prices[i].replace("원", ""));
+        // }
+
+        // slice 사용
+        // for(var i = 0; i < prices.length; i++){
+        //     total += parseInt(prices[i].slice(0, -1));
+        // }
+        
+        // console.log(prices);
+        // console.log(typeof total);
+        // console.log("합계: " + total);
+    </script>
+</body>
+</html>
