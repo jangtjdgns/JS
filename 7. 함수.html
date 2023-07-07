@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 기본 형태
+
+        // // 함수 선언
+        // function helloWorld(){
+        //     console.log("안녕 자바스크립트!");
+        // }
+        // // 함수 호출
+        // helloWorld();
+        
+
+        // // 두 수의 합 구하는 함수
+        // function add(a, b){     //값을 받는 쪽 -> 매개변수(파라미터)
+        //     console.log(a + b);
+        // }
+        // add(1, 2)       //값을 보내는쪽 -> 인자(파라미터)
+
+
+        // 두 수의 합 구하는 함수 (추가)
+        // function add(a, b){
+        //     return (a + b);      -> 리턴 필요
+        // }
+
+        // var result = add(1, 2);
+
+        // console.log(result);
+
+
+
+        // 두 수의 합과 차를 구하는 함수 (함수를 호출해서 출력)
+        // function add(a, b){
+        //     return a + b;
+        // }
+
+        // function del(a, b){
+        //     return a - b;
+        // }
+
+        // console.log(add(1, 2));     //값을 더하는 함수
+        // console.log(del(20, 2));    //값을 빼는 함수
+
+        // // 두 수의 합과 차를 구하는 함수 (함수안에서 출력)
+        // function add(a, b){
+        //     console.log(a + b);
+        // }
+
+        // function del(a, b){
+        //     console.log(a - b);
+        // }
+
+        // add(1, 2);     //값을 더하는 함수
+        // del(20, 2);    //값을 빼는 함수
+
+
+
+        // 더 큰 값을 반환하는 함수
+        // function getMax(a, b){
+        //     if(a > b){
+        //         return a;
+        //     } else if(a < b){
+        //         return b;
+        //     } else{
+        //         return "같습니다.";
+        //     }
+        // }
+
+        // console.log(getMax(10, 7));
+
+
+
+        // 퍼센트 계산
+        // var ONE_HUNDRED = 100;  // 전역 변수 (함수 밖)
+
+        // function getPercent(a, b){
+        //     var result = (b / a) * ONE_HUNDRED;   //지역 변수 (함수 안)
+        //     return result;
+        // }
+
+        // var x = 500;
+        // var y = 50;
+
+        // console.log(getPercent(x, y) + "%");
+        
+        // 함수 몸체에 선언한 변수는 해당 함수 안에서만 접근할 수 있음
+
+
+
+        // 대, 소문자 변환
+        // 대문자 -> 소문자
+        // function toLowerCase(a){    // 직접 만든 함수 -> toLowerCase()
+        //     return a.toLowerCase(); // 내장함수 -> .toLowerCase()
+        // }                           // -> 다름
+
+        // var result1 = toLowerCase("JANGSEONGHUN");
+
+        // console.log(result1);
+
+        // // 소문자 -> 대문자
+        // function toUpperCase(a){
+        //     return a.toUpperCase();
+        // }
+
+        // var result2 = toUpperCase("jangseonghun");
+
+        // console.log(result2);]
+
+
+
+        // 문자열 길이 반환
+        // function getLength(a){
+        //     return a.length;
+        // }
+
+        // console.log(getLength("JANGSEONGHUN"));
+
+
+
+        // function getName(a){
+        //     return a + "님";
+        // }
+
+        // var name = getName("장성훈");
+        // console.log(name);
+
+
+
+        // 배열 값 더하는 함수
+        // function calculateSum(a){
+        //     var sum = 0;
+        //     for(var i = 0; i < a.length; i++){
+        //         sum += a[i];
+        //     }
+
+        //     return sum;
+        // }
+
+        // console.log(calculateSum([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+    </script>
+</body>
+</html>
