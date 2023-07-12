@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="curTime"></h1> -->
+    <h1>
+        <div class="curTime">현재시간</div>
+        <div class="curTime"></div>
+        <div class="curTime">입니다.</div>
+        <button type="button" onclick="stopMessage()">중지 알림</button>
+        <button type="button" onclick="stop()">중지</button>
+    </h1>
+
+    </div>
+    <script>
+        var time = setInterval(function () {
+            // id 선택자
+            var curTime = document.getElementsByClassName("curTime");
+            // 색상 변경
+            curTime[0].style.color = "red";
+            curTime[1].innerHTML = getTodayDate();
+            curTime[2].style.color = "white";
+            curTime[2].style.backgroundColor = "black";
+        }, 1000);
+
+
+        function getTodayDate() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var date = today.getDate();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+
+            // 템플릿 리터럴 방식
+            return `${year}-${month}-${date} ${hour}:${minute}:${second}`;
+        }
+
+        function stopMessage() {
+            alert("중지되었습니다!");
+        }
+
+        function stop() {
+            var curTime = document.getElementsByClassName("curTime");
+            clearInterval(time);
+            curTime[1].innerHTML = "중지되었습니다.";
+        }
+    </script>
+</body>
+
+</html>
