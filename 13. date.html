@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="curTime"></h1> -->
+    <h1>
+        <div class="curTime">현재시간</div>
+        <div class="curTime" id="Time"></div>
+        <div class="curTime">입니다.</div>
+        <button type="button" onclick="stopMessage()">중지 알림</button>
+        <button type="button" onclick="stop()">중지</button>
+    </h1>
+
+    </div>
+    <script>
+        // var today = new Date();
+        // console.log(today);                        // 국제 표준 시간
+        // console.log(today.getFullYear() + "년");   // 년도 출력
+        // console.log(today.getMonth() + 1 + "월");  // 월 출력 -> + 1
+        // console.log(today.getDate() + "일");       // 일 출력
+        // console.log(today.getHours() + "시");      // 시 출력  0 ~ 23
+        // console.log(today.getMinutes() + "분");    // 분 출력
+        // console.log(today.getSeconds() + "초");    // 초 출력
+
+        var time = setInterval(function () {
+            // id 선택자
+            // var Time = document.getElementById("Time");
+            // Time.innerHTML = getTodayDate();
+
+            // class 선택자
+            var curTime = document.getElementsByClassName("curTime");
+            curTime[1].innerHTML = getTodayDate();
+
+            // tag 네임 선택자
+            // var curTime = document.getElementsByTagName("div");
+            // curTime[1].innerHTML = getTodayDate();
+
+            // 쿼리셀렉터 all -> 해당 선택자로 선택되는 요소 모두 선택
+            // 쿼리셀렉터 -> 맨 처음 요소만 가져옴
+            // var curTime = document.querySelectorAll("div");
+            // curTime[1].innerHTML = getTodayDate();
+        }, 1000);
+
+
+        function getTodayDate() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var date = today.getDate();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+
+            // 템플릿 리터럴 방식
+            return `${year}-${month}-${date} ${hour}:${minute}:${second}`;
+        }
+
+        function stopMessage(){
+            alert("중지되었습니다!");
+        }
+
+        function stop() {  
+            var curTime = document.getElementsByClassName("curTime");
+            clearInterval(time);
+            curTime[1].innerHTML = "중지되었습니다.";
+        }
+
+        // var todayDate;
+        // var curTime = document.getElementById("curTime");
+        // setInterval(function () {
+        //     todayDate = getTodayDate();
+        //     curTime.innerHTML =  getTodayDate();
+        //     // == `<h1>${getTodayDate()</h1>`;
+        //     // == `<button>${getTodayDate()}</button>`;
+        //     // == `<input type="text" value="${getTodayDate()}"/>`;
+        //     console.log(todayDate);
+        // }, 1000);
+    </script>
+</body>
+
+</html>
