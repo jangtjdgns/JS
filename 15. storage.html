@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = document.createElement("input");
+        input.value = "jang0208";
+
+        // 1. disabled = true -> 비활성화
+        // input.disabled = true;
+
+        // 2. readOnly = true -> 읽기전용 입력 X
+        // input.readOnly = true;
+
+        // // 3. setAttribute
+        // input.setAttribute("date-id", "myId");  // 속성값 추가
+        // input.setAttribute("maxlength", 5);     // maxlength 5 로 설정
+        // document.body.appendChild(input);
+
+        // // 4. getAttrubute -> 가져오기
+        // console.log(input.getAttribute("date-id"));
+        // console.log(input.getAttribute("maxlength"));
+
+        // local storage에 저장
+        // -> 어떤 데이터를 저장하고 싶을 때 사용
+        localStorage.setItem("myId", "jang0208");
+        console.log(localStorage.getItem("myId"));
+
+        // seestion storage에 저장
+        sessionStorage.setItem("myPw", 1234);
+        console.log(sessionStorage.getItem("myPw"));
+    </script>
+</body>
+</html>
