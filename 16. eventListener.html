@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. click -->
+    <input type="button" id="target" value="DannyJae">
+    <br>
+    <!-- 2. input -->
+    input
+    <input type="text" id="myInput" />
+    <br>
+    <!-- 3. change -->
+    change
+    <input type="text" id="myInputC">
+    <br>
+    <!-- 4. focus -->
+    focus
+    <input type="text" id="myInputF">
+    <br>
+    <!-- 5. blud -->
+    blud
+    <input type="text" id="myInputB">
+    <br>
+    <!-- 7. button 클릭 -->
+    <button type="button" id="myButton">클릭이벤트</button>
+    <br>
+    <div id="myDiv">
+
+    </div>
+    <script>
+        // 1. click event
+        var targetBtn = document.getElementById("target");
+        targetBtn.addEventListener("click", function (evnet) {
+            alert("Hello world " + event.target.value);
+        });
+
+        // 2. input event
+        var myInput = document.getElementById("myInput");
+
+        myInput.addEventListener("input", function (event) {
+            console.log(event.target.value);
+        });
+
+        // 3. change event
+        var myInputC = document.getElementById("myInputC");
+
+        myInputC.addEventListener("change", function (event) {
+            console.log(event.target.value);
+        });
+
+        // 4. focus event -> 인풋 내부 클릭
+        var myInputF = document.getElementById("myInputF");
+
+        myInputF.addEventListener("focus", function (event) {
+            console.log("input focused");
+        });
+
+        // 5. blud event -> 인풋 외부 클릭
+        var myInputB = document.getElementById("myInputB");
+
+        myInputB.addEventListener("blur", function (event) {
+            console.log("input blurred");
+        });
+
+        // 6. keydown
+        // keyup - 클릭 후 발생, keydown - 클릭 시 발생, keypress - 기능키 안눌림
+        var key = "keydown";
+        document.addEventListener(key, function (event){
+            console.log(key + " - key: ", event.key);
+            console.log(key + " - keyCode: ", event.keyCode);
+            console.log(key + " - code: ", event.code);
+            console.log("======================");
+        });
+
+        // 7. 버튼 클릭
+        // dblclick - 더블클릭
+        var myBtn = document.getElementById("myButton");
+        myBtn.addEventListener("keydown", function(evnet){
+            console.log("button clicked");
+        });
+
+        // 8. 마우스 클릭
+        // mouseup - 마우스 클릭 후 발생, mousedown - 마우스 클릭 시 발생
+        // mouseover - 해당 div에 마우스가 있을 경우 발생
+        // mousemove - 해당 div안에서 마우스가 움직일때 발생
+        var div = document.getElementById("myDiv");
+        var myMouse = "mouseup";
+        div.addEventListener(myMouse, function(event){
+            if(myMouse == "mousemove"){
+                console.log("X" + event.clientX, "Y: "+ event.clientY);
+            } else{
+                console.log("Button clicked!!");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
