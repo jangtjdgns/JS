@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        <p>첫 번째 문단<button type="button" onclick="remove()">삭제</button></p>
+        <p id="target">두 번째 문단(대상)<button type="button" onclick="remove()">삭제</button></p>
+        <p>세 번째 문단<button type="button" onclick="remove()">삭제</button></p>
+    </div>
+    <script>
+        var pElement = document.getElementById("parent");
+        console.log(pElement.firstElementChild.textContent);   // 첫째 자식
+        console.log(pElement.lastElementChild.textContent);    // 둘째 자식
+        console.log(pElement.children);                        // 모든 자식
+        console.log(pElement.children[1].textContent);         // 모든 자식
+
+        // 요소 삭제
+        // function remove(){
+        //     pElement = document.getElementById("parent");
+        //     pElement.removeChild(pElement.children[1]);
+        //     console.log(pElement.children);
+        // }
+
+        // 해당 타겟 부모 삭제
+        // event.target
+        function remove() {
+            event.target.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>
