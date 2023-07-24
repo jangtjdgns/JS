@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>첫 번째 문단</p>
+    <p id="target">두 번째 문단(대상)</p>
+    <p>세 번째 문단</p>
+    <script>
+        // 형제 요소 선택
+        // 형제 요소 스타일, 속성 등 변경할 때 사용
+        function getNextSibling(){
+            var element = document.getElementById("target");
+            console.log(element);
+            
+            var NextSibling = element.nextElementSibling;
+            console.log(NextSibling.textContent);
+
+            var preSibling = element.previousElementSibling;
+            console.log(preSibling.textContent)
+        }
+
+
+        getNextSibling();
+    </script>
+</body>
+</html>
