@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var URI = `http://hanbit.co.kr?test=한글입니다.`;
+        
+        // 1. escape, unescape -> 권장하지 않음 
+        // 인코딩
+        escape(URI);
+        // console.log(escape(URI));
+    
+        // 디코딩
+        unescape(URI);
+        // console.log(unescape(URI));
+    
+    
+        // 2. encodeURI, decoudeURI -> 권장
+        // 인코딩
+        encodeURI(URI);
+        // console.log(encodeURI(URI));
+        // 디코딩
+        decodeURI(URI);
+        // console.log(decodeURI(URI));
+    </script>
+
+</body>
+
+</html>
