@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(function () {
+            $('*');                         // 전체 선택자
+            $('h1');                        // 태그 선택자
+            $('#text');                     // 아이디 선택자
+            $('.text');                     // 클래스 선택자
+            $('input[type=text]');          // 속성 선택자
+            $('input:disabled');
+            $('input:enabled');
+
+            // 구조 선택자
+            $('div:first-child');           // 첫번째 자식
+            $('div:last-child');            // 마지막 자식
+            $('div:nth-child(n)');          // n번째 자식
+            $('div:nth-child(odd)');        // 자식중에 홀수인 요소 선택
+            $('div:nth-child(even)');       // 자식중에 짝수인 요소 선택
+
+
+            // 필터 셀렉터
+            $('div:first');                 // 첫번째 요소 선택
+            $('div:last');                  // 마지막 요소 선택
+            $('div:odd');                   // 홀수인 요소 선택
+            $('div:even');                  // 짝수인 요소 선택
+
+            $('div:eq(0)');                 // 해당 인덱스 선택
+            $('div:gt(n)');                 // n보다 큰 인덱스 선택
+            $('div:lt(n)');                 // n보다 작은 인덱스 선택
+
+
+            $('div > ul');                  // 자손선택자
+            $('div li');                    // 후손 선택자
+
+            $('div + h1')                   // 형제 선택자, 다음 선택
+            $('div ~ h1')                   // 형제 선택자, 모두 선택
+        });
+    </script>
+</body>
+
+</html>
