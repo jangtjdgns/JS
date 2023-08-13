@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        .fishbowl {
+            width: 80vw;
+            height: 100vh;
+            border: 30px solid black;
+            box-sizing: border-box;
+            border-radius: 200px;
+            background-color: rgb(185, 241, 241);
+        }
+
+        .fishbowl img {
+            display: block;
+        }
+    </style>
+    <script>
+        $(function () {
+            var newFish = $("<img>")
+                newFish.attr('src', "/23.08.13(일)/img/fish02.png");
+                newFish.attr('alt', '파란물고기');
+
+            $('.btn01').click(function () {
+                // append() -> 자손으로 끝에 추가
+                $('.fishbowl').append(newFish);
+            });
+
+            $('.btn02').click(function () {
+                // prepend() -> 자손으로 앞에 추가
+                $('.fishbowl').prepend(newFish);
+            });
+
+            $('.btn03').click(function () {
+                // after() -> 형제로 뒤에 추가
+                $('.fishbowl').after(newFish);
+            });
+
+            $('.btn04').click(function () {
+                // after() -> 형제로 앞에 추가
+                $('.fishbowl').before(newFish);
+            });
+
+
+            // ~~~.appendTo('body') -> body 뒤에 추가
+        });
+    </script>
+</head>
+
+<body>
+    <div class="fishbowl">
+        <img src="/23.08.13(일)/img/fish01.png" alt="노란물고기" />
+    </div>
+    <button class="btn01">append()</button>
+    <button class="btn02">prepend()</button>
+    <button class="btn03">after()</button>
+    <button class="btn04">before()</button>
+</body>
+
+</html>
