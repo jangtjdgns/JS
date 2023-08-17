@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style></style>
+    <script>
+        $(function () {
+            $('.box > ul').css({
+                'border': '3px solid black',
+                'width': 200,
+            });
+            
+            $('.box li').css({
+                'color': 'blue',
+                'font-style': 'italic',
+            });
+
+            $('h3 + h4').css('color', 'red');
+            $('h3 ~ h4').css('text-decoration', 'underline');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>리스트태그</li>
+            <li>리스트태그</li>
+            <li>리스트태그</li>
+            <li>리스트태그</li>
+            <li>리스트태그</li>
+        </ul>
+    </div>
+    <hr />
+    <h3>제목태그3</h3>
+    <h4>제목태그4</h4>
+    <h4>제목태그4</h4>
+    <h4>제목태그4</h4>
+    <h4>제목태그4</h4>
+    <h4>제목태그4</h4>
+</body>
+
+</html>
